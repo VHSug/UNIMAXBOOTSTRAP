@@ -9,13 +9,28 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <header class="cabecalho bg-dark text-light py-3">
-        <nav class="cabecalho_menu container d-flex justify-content-around">
-            <a class="cabecalho_menu_link text-light" href="{{ url_for('index') }}">Home</a>
-            <a class="cabecalho_menu_link text-light" href="{{ url_for('about') }}">Sobre mim</a>
-            <a class="cabecalho_menu_link text-light" href="{{ url_for('historico') }}">Histórico</a>
+    <header class="cabecalho bg-dark text-light">
+        <nav class="navbar navbar-expand-lg navbar-dark container">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{{ url_for('index') }}">Meu Portfólio</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link {{ 'active' if request.endpoint == 'index' else '' }}" href="{{ url_for('index') }}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {{ 'active' if request.endpoint == 'about' else '' }}" href="{{ url_for('about') }}">Sobre mim</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {{ 'active' if request.endpoint == 'historico' else '' }}" href="{{ url_for('historico') }}">Histórico</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
-    </header>
     
     <main class="apresentação">
         <section class="apresentação__conteudo text-center">
@@ -33,7 +48,7 @@
                 Cursei o curso da Alura, se aprofundando em CSS, HTML, JAVASCRIPT, e logo após em outras linguagens de programação.
             </p>
             <p class="apresentação__conteudo__texto">
-                Agora trabalho na empresa Ebravo como Desenvolvedor Junior, usando linguagens como Java Spring Boot, Angular e React.
+                Agora trabalho na empresa Ebravo como Desenvolvedor Junior, usando linguagens como Java Spring Boot, Angular.
             </p>
         </section>
         <section>
