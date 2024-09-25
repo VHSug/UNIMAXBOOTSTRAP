@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header class="cabecalho bg-dark text-light py-3">
+        <nav class="cabecalho_menu container d-flex justify-content-around">
+            <a class="cabecalho_menu_link text-light" href="{{ url_for('index') }}">Home</a>
+            <a class="cabecalho_menu_link text-light" href="{{ url_for('about') }}">Sobre mim</a>
+            <a class="cabecalho_menu_link text-light" href="{{ url_for('historico') }}">Histórico</a>
+        </nav>
+    </header>
+    
+    <main class="apresentação container my-5 text-center">
+        <section class="apresentação__conteudo mb-5">
+            <h1 class="apresentação__conteudo__titulo display-4">Esse é o meu <strong class="destaque text-primary">"Site"</strong> Criado do <strong class="destaque text-primary">zero!!!</strong></h1>
+            <h2>Formando em Ciências da Computação</h2>
+            <p class="apresentação__conteudo__texto lead">Olá! Sou Vitor Hideki Sugawara, Pseudo Desenvolvedor e futuro programador. Se quiser conversar comigo em algum lugar, estão aqui os meus links pessoais:</p>
+        </section>
+
+        <section class="apresentação__links mb-5">
+            <h2 class="apresentacao_links_subtitulo">Siga minhas redes sociais</h2>
+            <div class="d-flex justify-content-center gap-3">
+                <a class="apresentação__links__link" href="https://github.com/VHSug">
+                    <img src="{{ url_for('static', filename='github.png') }}" alt="GitHub" class="img-fluid" style="width: 50px;">
+                </a>
+                <a class="apresentação__links__link" href="https://www.instagram.com/ikedih.o/">
+                    <img src="{{ url_for('static', filename='instagram.png') }}" alt="Instagram" class="img-fluid" style="width: 50px;">
+                </a>
+                <a class="apresentação__links__link" href="https://www.linkedin.com/in/vitor-hideki-sugawara-8b96022a0/">
+                    <img src="{{ url_for('static', filename='linkedin.png') }}" alt="LinkedIn" class="img-fluid" style="width: 50px;">
+                </a>
+            </div>
+        </section>
+
+        <section>
+            <img class="apresentacaoimg img-fluid rounded-circle" src="{{ url_for('static', filename='eu.png') }}" alt="Esse sou eu, Vitor Hideki Sugawara." style="width: 200px;">
+        </section>
+    </main>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

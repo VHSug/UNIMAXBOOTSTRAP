@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header class="cabecalho bg-dark text-light py-3">
+        <nav class="cabecalho_menu container d-flex justify-content-around">
+            <a class="cabecalho_menu_link text-light" href="{{ url_for('index') }}">Home</a>
+            <a class="cabecalho_menu_link text-light" href="{{ url_for('about') }}">Sobre mim</a>
+            <a class="cabecalho_menu_link text-light" href="{{ url_for('historico') }}">Histórico</a>
+        </nav>
+    </header>
+    
+    <main class="apresentação py-5">
+        <section class="apresentação_conteudo2 container">
+            <h1 class="apresentação__conteudo__titulo text-center mb-4">Trabalhos da Faculdade</h1>
+            
+            <div class="mb-5">
+                <h2 class="apresentação__conteudo__titulo">Carrinho a Controle Remoto</h2>
+                <img src="{{ url_for('static', filename='carrinho.png') }}" class="img-fluid" alt="Foto do projeto primeiro semestre">
+                <p class="apresentação__conteudo__texto mt-3">A foto acima é o projeto que nós, o grupo da faculdade, criamos no primeiro semestre.</p>
+                <p class="apresentação__conteudo__texto">Fizemos um carrinho com Arduino, 4 motores e 2 pontes H. Colocamos também 3 sensores, um na frente e dois de cada lado.</p>
+                <p class="apresentação__conteudo__texto">Ao controle remoto nós utilizamos a conexão de controle-carrinho via cabo de internet, já os sensores seriam para uma coisa a mais: Modo Automatizado.</p>
+                <p class="apresentação__conteudo__texto">O grupo do projeto é formado por mim, Vitor Hideki Sugawara, Pedro Henrique Fernandes, Enzo Barbieri, Guilherme Nicchio e Guilherme Henrique Souza.</p>
+                <p class="apresentação__conteudo__texto">Segue abaixo a foto do grupo:</p>
+                <img src="{{ url_for('static', filename='Grupo.png') }}" class="img-fluid" alt="Foto do grupo do projeto primeiro semestre">
+                <p class="apresentação__conteudo__texto">Como dito já, por pontuação na apresentação da feira na faculdade, nosso trabalho foi considerado o <strong class="titulo-destaque2">melhor da turma</strong> no primeiro semestre.</p>
+            </div>
+
+            <div class="mb-5">
+                <h2 class="apresentação__conteudo__titulo">Casa Automática</h2>
+                <p class="apresentação__conteudo__texto">Esse foi o projeto do segundo semestre que, no caso, foi a escolha de fazer uma <strong class="titulo-destaque2">casa automática</strong>.</p>
+                <p class="apresentação__conteudo__texto">Fizemos uma maquete de uma casa de dois andares (sem decoração interna). Colocamos um Arduino no segundo andar e conectamos LEDs do tipo fita tanto no primeiro, quanto no segundo andar.</p>
+                <img src="{{ url_for('static', filename='casa.png') }}" class="img-fluid" alt="Da maquete do segundo semestre com as luzes internas acesas">
+                <p class="apresentação__conteudo__texto">Criamos um código para que pudéssemos acender e desligar as luzes dos LEDs conectados no Arduino. A ideia inicial seria por via Bluetooth, mas não deu certo. Então, segundo plano: Via Wi-Fi.</p>
+                <p class="apresentação__conteudo__texto">Com um roteador e um site que nós criamos com botões de acender e desligar as luzes, o projeto estava praticamente feito, até que tivemos a ideia de também colocar um motor para abrir e fechar um portão, e é o que nós fizemos.</p>
+                <p class="apresentação__conteudo__texto">No fim, conseguimos fazer tudo. Dessa vez teve mais um integrante no grupo, diferente do primeiro semestre. Além de mim, Vitor Hideki Sugawara, Pedro Henrique Fernandes, Enzo Barbieri, Guilherme Nicchio e Guilherme Henrique Souza, teve também a ajuda de Gabriel Sanchez Dolenc.</p>
+                <p class="apresentação__conteudo__texto">Infelizmente nós não tiramos fotos desse projeto igual no primeiro.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
